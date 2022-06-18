@@ -26,7 +26,40 @@
     -->
     <title>Infrared - @chaniru.lk</title>
   </head>
-  <body>
+ <body oncontextmenu="return false;">
+    <script>
+      // disable right click
+      document.addEventListener('contextmenu', event => event.preventDefault());
+   
+      document.onkeydown = function (e) {
+   
+          // disable F12 key
+          if(e.keyCode == 123) {
+              return false;
+          }
+  
+          /// disable F11 key
+          if(e.keyCode == 122) {
+              return false;
+          }
+   
+          // disable I key
+          if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+              return false;
+          }
+   
+          // disable J key
+          if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              return false;
+          }
+   
+          // disable U key
+          if(e.ctrlKey && e.keyCode == 85) {
+              return false;
+          }
+      }
+   
+  </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
